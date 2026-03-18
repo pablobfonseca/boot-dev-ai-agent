@@ -19,7 +19,7 @@ messages = [types.Content(
     role="user", parts=[types.Part(text=args.user_prompt)])]
 
 result = client.models.generate_content(
-    model="gemini-2.0-flash-001", contents=messages)
+    model="gemini-2.5-flash", contents=messages)
 
 usage = result.usage_metadata
 if usage is None:
